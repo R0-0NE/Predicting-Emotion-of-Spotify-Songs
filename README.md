@@ -24,3 +24,62 @@ Speechiness: Speechiness detects the presence of spoken words in a track. (e.g. 
 Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
 
 Tempo: The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, the tempo is the speed or pace of a given piece and derives directly from the average beat duration.
+
+
+### Importing Libraries and Dataset
+Data Manipulation:
+Pandas
+numpy 
+Visualization library:
+matplotlib.pyplot
+seaborn
+
+### Basic EDA (Exploratory Data Analysis)
+Checking Shape- There are 277938 rows and 12 columns 
+Missing values- There are no missing values in this dataset
+checking Info & describe of dataset
+
+Checking Correlation- Then we check correlation by Heatmap using .corr() function, Highest correlated column with the target column is Instrumentalness with 0.54
+Droping unwanted columns
+
+### Binary Classification 
+we are selecting only two labels i.e Sad & Happy, After selecting these two labels we have a data shape of near about 18000 rows with 11 columns.
+Then we put our input features in X variable and target column in y variable.
+
+### Splitting of Data
+We split the data into 7:3 ratio , (test size of 30%) with random state : 42
+
+### Scaling Values
+We have applied Standard Scaler on Data.
+Satandard Scaler:
+StandardScaler is used in machine learning and data preprocessing to standardize features by removing the mean and scaling them to unit variance. This process is important because it helps in bringing all features to a similar scale, which prevents certain features from dominating the learning process simply because they have larger scales than others.
+Standardizing the features ensures that they have a mean of 0 and a standard deviation of 1, making it easier for algorithms to learn.
+
+### Applying Logistic Regression
+
+Logistic regression is a classification algorithm used to predict the probability of a binary outcome based on one or more predictor variables. It models the relationship between the dependent variable and independent variables by estimating the probabilities using a logistic function.
+After applying model we check predictions on X test scsaled data and then we plot classification report and confusion metrics
+
+### Accuracy
+Our model got 88.44% accuracy on train data & 88.32% on test data 
+
+### Improving Model by GridSearch CV
+
+GridSearchCV is a technique used for hyperparameter tuning in machine learning, where a grid of hyperparameters is systematically searched using cross-validation to find the optimal combination that maximizes the model's performance on a given dataset. It exhaustively tries all possible hyperparameter combinations to identify the best set of values for the model.
+After applying Gridsearch cv with proper parameters we get best parameters 
+
+### Final Accuracy & Classification Report
+we got 88.32% Accuracy
+
+
+
+
+
+
+
+
+
+
+
+
+
