@@ -1,5 +1,5 @@
 # Predicting-Emotion-of-Spotify-Songs
-### AIM: Predicting Whether the Song is Sad Song or Happy Song.
+## AIM: Predicting Whether the Song is Sad Song or Happy Song.
 
 ### Dataset: Kaggle Spotify Label Dataset
 
